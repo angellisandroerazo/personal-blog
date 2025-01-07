@@ -1,0 +1,38 @@
+{{template "layouts/main" }}
+<div class="flex flex-col justify-center items-center h-full">
+  <form action="/admin/create-post" method="post" class="w-2/5">
+    <div class="is-flex-direction-column">
+      <h1 class="title">New Posts</h1>
+
+      <div class="field">
+        <label class="label">Title</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Text input"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Body</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            placeholder="Textarea"
+            id="body"
+            name="body"
+          ></textarea>
+        </div>
+      </div>
+      <div class="buttons">
+        <input class="button is-primary" type="submit" value="Publish" />
+        <a class="button is-danger" href="/admin">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>
+{{template "layouts/footer" }}

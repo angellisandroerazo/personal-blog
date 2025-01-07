@@ -1,0 +1,31 @@
+{{template "layouts/main"}} {{template "partials/admin_navbar"}}
+
+<div class="flex flex-col justify-center items-center m-5">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {{range .Posts}}
+    <div class="card max-h-max">
+      <header class="card-header">
+        <p class="card-header-title">{{.Title}}</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <time datetime="2016-1-1">{{.Date}}</time>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="/post/{{.ID}}" class="card-footer-item has-text-primary"
+          >View</a
+        >
+        <a href="/admin/edit/{{.ID}}" class="card-footer-item has-text-warning"
+          >Edit</a
+        >
+        <a href="/admin/delete/{{.ID}}"  onclick="return confirm('Are you sure?');" class="card-footer-item has-text-danger"
+          >Delete</a
+        >
+      </footer>
+    </div>
+    {{end}}
+  </div>
+</div>
+
+{{template "layouts/footer"}}
