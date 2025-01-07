@@ -40,4 +40,4 @@ A personal blog is a digital space where you share your experiences, thoughts, i
 </div>
 
 ## Problem Statement
-This project addresses a task management problem inspired by the challenges outlined in the [Unit Converter ](https://roadmap.sh/projects/personal-blog).
+This project addresses a task management problem inspired by the challenges outlined in the [Personal Blog](https://roadmap.sh/projects/personal-blog).
